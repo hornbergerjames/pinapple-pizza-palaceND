@@ -30,10 +30,20 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+
+      - name: Find website files
+        run: |
+          echo "Repository folders:"
+          ls -la
+          echo "Website index files:"
+          find . -name index.html
+
+          
+
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./pineapple-pizza-palaceND/pineapple-pizza-palaceND
+          path: ./pinapple-pizza-palaceND/pinapple-pizza-palaceND
 
       - name: Deploy to GitHub Pages
         id: deployment
