@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Website — Responsive Preview</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#1e293b;background:#f1f5f9}*{box-sizing:border-box}body{margin:0}.top{background:#fff;border-bottom:1px solid #dbe3ed;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}h1{font-size:1.25rem;margin:0}p{margin:5px 0 0;color:#526175;font-size:.9rem}.controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:18px}.controls button{background:white;border:1px solid #bac8d8;border-radius:9px;padding:11px 18px;font:inherit;cursor:pointer}.controls button[aria-pressed=true]{background:#155e9b;color:#fff;border-color:#155e9b}.stage{padding:0 14px 32px;display:flex;justify-content:center;overflow:auto}.frame{width:100%;max-width:1200px;transition:width .2s ease;flex-shrink:0;background:white;border:7px solid #263244;border-radius:18px;box-shadow:0 12px 32px #1e293b2b;overflow:hidden}.frame iframe{display:block;width:100%;height:75vh;min-height:540px;border:0}.hint{text-align:center;color:#526175;padding:0 18px 14px;font-size:.9rem}a{color:#155e9b}.mobile .frame{width:390px}.tablet .frame{width:768px}@media(max-width:430px){.mobile .frame{width:390px}.stage{justify-content:flex-start}.top{padding:16px}}
+</style>
+</head>
+<body>
+<header class="top"><div><h1>Student Website — Responsive Preview</h1><p>Choose a screen size to see how the website adapts.</p></div><a href="https://loquacious-tarsier-01e748.netlify.app/" target="_blank" rel="noopener">Open original website ↗</a></header>
+<div class="controls" role="group" aria-label="Choose screen size">
+<button data-mode="desktop" aria-pressed="false">🖥 Desktop</button>
+<button data-mode="tablet" aria-pressed="false">▣ Tablet</button>
+<button data-mode="mobile" aria-pressed="true">▯ Mobile phone</button>
+</div>
+<div class="hint" id="dimensions">Mobile phone · 390 px wide</div>
+<main class="stage mobile" id="stage"><div class="frame"><iframe title="Student website" src="https://loquacious-tarsier-01e748.netlify.app/" loading="eager"></iframe></div></main>
+<p class="hint">If the website does not appear inside the preview, use “Open original website.” Some websites prevent embedding for security.</p>
+<script>
+const stage=document.getElementById('stage'),dims=document.getElementById('dimensions');
+const sizes={desktop:'Desktop · up to 1200 px wide',tablet:'Tablet · 768 px wide',mobile:'Mobile phone · 390 px wide'};
+document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{const mode=button.dataset.mode;stage.className='stage '+mode;dims.textContent=sizes[mode];document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
+</script>
+</body></html>
