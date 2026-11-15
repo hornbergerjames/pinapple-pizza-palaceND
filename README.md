@@ -2,7 +2,7 @@ Several different languages are being used: HTML, CSS, and JavaScript.
 This is a fully functional pizza restaurant website, 
 complete with an interactive shopping cart and checkout. 
 
-Click the link below and give it a try! Enjoy! 
+Click the link and give it a try! Enjoy! 
 Add a few pizzas to your cart and check out. 
 It really works!
 
